@@ -5,8 +5,9 @@ namespace Logger
 {
     public class FileLogger : BaseLogger
     {
-        private string LogFilePath { get; set; }
+        public string LogFilePath { get; set; }
 
+        public FileLogger(){}
         public FileLogger(string logFilePath)
         {
             LogFilePath = logFilePath;
@@ -14,9 +15,20 @@ namespace Logger
 
         public override void Log(LogLevel logLevel, string message)
         {
-            File.AppendAllText(LogFilePath, $"{DateTime.Now:HH:m:s zzz} " 
-                                             + $"{nameof(ClassName)} {logLevel}: " +
-                                             $"{message} {Environment.NewLine}");
+            string logMessage = DateTime.Now.ToString() + " " + ClassName + " " + logLevel + ": " + message + "\n";
+            if(File.Exists(LogFilePath))
+            {
+                StreamWriter streamWriter = File.AppendText(LogFilePath);
+                streamWriter.Write(logMessage);
+                streamWriter.Close();
+                
+            }
+            else
+            {
+                StreamWriter streamWriter = File.CreateText(LogFilePath);
+                streamWriter.Write(logMessage);
+                streamWriter.Close();
+            }
         }
         
     }
