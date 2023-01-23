@@ -15,8 +15,8 @@ namespace Logger
 
         public override void Log(LogLevel logLevel, string message)
         {
-            string logMessage = DateTime.Now.ToString() + " " + ClassName + " " + logLevel + ": " + message + "\n";
-            if(File.Exists(LogFilePath))
+            var logMessage = DateTime.Now.ToString() + " " + ClassName + " " + logLevel + ": " + message + "\n";
+            if(!File.Exists(LogFilePath))
             {
                 StreamWriter streamWriter = File.AppendText(LogFilePath);
                 streamWriter.Write(logMessage);
@@ -25,9 +25,7 @@ namespace Logger
             }
             else
             {
-                StreamWriter streamWriter = File.CreateText(LogFilePath);
-                streamWriter.Write(logMessage);
-                streamWriter.Close();
+                throw new ArgumentException("File Path is null");
             }
         }
         

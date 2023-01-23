@@ -4,12 +4,12 @@
   
     public class LogFactory
     {
-        private string _logFilePath { get; set; }
+        private string LogFilePath { get; set; }
         public BaseLogger CreateLogger(string className)
         {
-            if (!string.IsNullOrEmpty(_logFilePath) && _logFilePath != null)
+            if (!string.IsNullOrEmpty(LogFilePath))
             {
-                BaseLogger baseLogger = new FileLogger(_logFilePath);
+                BaseLogger baseLogger = new FileLogger(LogFilePath);
                 baseLogger.ClassName = className;
                 return baseLogger;
 
@@ -22,7 +22,7 @@
 
         public void ConfigureFileLogger(string logFilePath)
         {
-            _logFilePath = logFilePath;
+           LogFilePath = logFilePath;
         }
         
     }
