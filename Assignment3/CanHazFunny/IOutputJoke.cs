@@ -2,5 +2,5 @@
 
 public interface IOutputJoke
 {
-    public void Print(string output);
+    void TellJoke(string joke);
 }

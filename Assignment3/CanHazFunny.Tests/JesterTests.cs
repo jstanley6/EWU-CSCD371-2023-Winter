@@ -1,60 +1,50 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using Moq;
 namespace CanHazFunny.Tests
 {
     [TestClass]
     public class JesterTests
     {
+        [TestMethod]
+        public void Jester_HasJokeServiceDependency_Pass()
+        {
+            OutputJoke outputJoke = new();
+            JokeService jokeService = new();
+            Jester jester = new(jokeService, outputJoke);
+            Assert.AreEqual<IJokeService>(jokeService, jester.JokeService);
+        }
         
         [TestMethod]
-        public void InitializeJester_Pass()
+        public void Jester_HasOutputJokeDependency_Pass()
         {
-            OutputJoke outputJoke = new OutputJoke();
-            JokeService jokeService = new JokeService();
-            Assert.IsNotNull(outputJoke);
-            Assert.IsNotNull(jokeService);
-
-            Jester jester = new Jester(jokeService, outputJoke);
-            Assert.IsNotNull(jester);
-            Assert.AreEqual(jokeService, jester._jokeService);
+            OutputJoke outputJoke = new();
+            JokeService jokeService = new();
+            Jester jester = new(jokeService, outputJoke);
+            Assert.AreEqual<IOutputJoke>(outputJoke, jester.OutputJoke);
             
         }
         
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void JesterNullArgumentException()
+        public void Jester_IfJokeServiceIsNullThrowException_Pass()
         {
-            new Jester(null, new OutputJoke());
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void OutputIsNullThrowsException()
-        {
-            Jester testJester = new Jester(new JokeService(), null);
-            Assert.IsNotNull(testJester);
-            string joke = testJester.TellJoke();
-            Assert.IsNotNull(joke);
             
+            JokeService jokeService = null!;
+            OutputJoke outputJoke = new();
+            Jester jester;
+            Assert.ThrowsException<ArgumentNullException>(() => jester = new(jokeService, outputJoke));
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void JesterPrintThrowsNull()
+        public void Jester_IfOutputJokeIsNullThrowsException_Pass()
         {
-            new Jester(new JokeService(), null);
-        }
 
-        public void JesterTellJoke_Pass()
-        {
-            Jester testJester = new Jester(new JokeService(), new OutputJoke());
-            Assert.IsNotNull(testJester);
-            string joke = testJester.TellJoke();
-            Assert.IsFalse(String.IsNullOrEmpty(joke));
-
+            JokeService jokeService = new()!;
+            OutputJoke outputJoke = null!;
+            Jester jester;
+            Assert.ThrowsException<ArgumentNullException>(() => jester = new(jokeService, outputJoke));
 
         }
-        
     }
 }
 

@@ -4,8 +4,8 @@ namespace CanHazFunny;
 
 public class OutputJoke : IOutputJoke
 {
-    public void Print(string output)
+    public void TellJoke(string joke)
     {
-        Console.WriteLine(output);
+        Console.WriteLine(joke);
     }
 }
