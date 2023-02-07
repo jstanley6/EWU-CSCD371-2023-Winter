@@ -1,4 +1,6 @@
-﻿namespace Logger;
+﻿using System;
+
+namespace Logger;
 
 //Provide a comment on the full name record on why you selected to define a value or a reference type
 //A struct is a value type comparison. It needs to be a value type because a reference type will only modify the
