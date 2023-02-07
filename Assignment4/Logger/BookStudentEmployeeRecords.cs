@@ -9,6 +9,11 @@ public record Book : IEntity
     public string Name => $"Book {BookName} \n Author: {Author.Name} \n ISBN: {Isbn}";
 }
 
+//Provide a comment on each interface
+//**member** in each entity explaining why you implemented it implicitly or explicitly.
+
+//Implemented all three Implicitly for precision and to avoid conflict 
+//of members having the same properties
 public record Student : Person
 {
    public StudentClassification StudentYear { get; init; }
