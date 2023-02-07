@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84770204-458b-469b-8e80-42ed40d585f0" name="Changes" comment="Added Unit Testing">
-      <change beforePath="$PROJECT_DIR$/Logger.Tests/FileLoggerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logger.Tests/FileLoggerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logger.Tests/FileLoggerTestsBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logger.Tests/FileLoggerTestsBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logger.Tests/StorageTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logger.Tests/StorageTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logger.Tests/TestLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logger.Tests/TestLogger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logger/BaseConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logger/BaseConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logger/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logger/BaseEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logger/BaseLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logger/BaseLogger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logger/BaseLoggerMixins.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logger/BaseLoggerMixins.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logger/BookStudentEmployeeRecords.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logger/BookStudentEmployeeRecords.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logger/FileLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logger/FileLogger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logger/FileLoggerConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logger/FileLoggerConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logger/FullName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logger/FullName.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logger/Storage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Logger/Storage.cs" afterDir="false" />
+    <list default="true" id="84770204-458b-469b-8e80-42ed40d585f0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Logger/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Logger/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/Jason/Documents/CSCD371-Winter2023/EWU-CSCD371-2023-Winter/Assignment4/Logger/BaseConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -54,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675664778085</updated>
-      <workItem from="1675664783785" duration="12942000" />
+      <workItem from="1675664783785" duration="13852000" />
     </task>
     <task id="LOCAL-00001" summary="Added Unit Testing">
       <created>1675753766639</created>
@@ -63,7 +54,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675753766639</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Unit Tests">
+      <created>1675754795455</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675754795455</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -74,6 +72,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Added Unit Testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Unit Testing" />
+    <MESSAGE value="Added Unit Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Unit Tests" />
   </component>
 </project>
