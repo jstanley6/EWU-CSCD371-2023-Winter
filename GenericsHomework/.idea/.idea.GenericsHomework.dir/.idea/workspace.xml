@@ -2,16 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d674c762-ce87-4bca-a3c6-64a25cc7a630" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GenericsHomework/Directory.Build.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GenericsHomework.dir/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GenericsHomework.dir/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GenericsHomework.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GenericsHomework.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/Coding-Guidelines.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/Coding-Guidelines.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/Developer-Resources.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/Developer-Resources.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/Homework-Assignments.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/Homework-Assignments.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/Homework-Grading.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/Homework-Grading.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/MicrosoftTeams.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/MicrosoftTeams.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenericsHomework.Tests/GenericsHomework.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GenericsHomework/GenericsHomework.Tests/GenericsHomework.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenericsHomework.Tests/NodeTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GenericsHomework/GenericsHomework.Tests/NodeTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenericsHomework.Tests/Usings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GenericsHomework/GenericsHomework.Tests/Usings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenericsHomework/GenericsHomework.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GenericsHomework/GenericsHomework/GenericsHomework.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenericsHomework/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GenericsHomework/GenericsHomework/Node.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global.json" beforeDir="false" afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="XML File" />
+        <option value="tsconfig.json" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="Assignment5" />
+      </map>
+    </option>
+    <option name="RESET_MODE" value="HARD" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5ff698f6756e0df8c833d8e8c4273c6d86ee7babdbe4d352268f6a54d8f14/EqualityComparer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GenericsHomework/Node.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GenericsHomework/GenericsHomework.Tests/NodeTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GenericsHomework/GenericsHomework.Tests/Usings.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GenericsHomework/GenericsHomework/Node.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -26,11 +58,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Git.Branch.Popup.ShowAllRemotes": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Jason/Documents/CSCD371-Winter2023/EWU-CSCD371-2023-Winter/GenericsHomework/GenericsHomework",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "advanced.settings",
+    "settings.editor.selected.configurable": "SolutionBuilderGeneralOptionsPage",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -50,6 +84,10 @@
       <option name="presentableId" value="Default" />
       <updated>1676346344515</updated>
       <workItem from="1676346348027" duration="9067000" />
+      <workItem from="1676366275686" duration="2659000" />
+      <workItem from="1676368983959" duration="101000" />
+      <workItem from="1676369095856" duration="38000" />
+      <workItem from="1676369150967" duration="3021000" />
     </task>
     <servers />
   </component>
@@ -57,27 +95,31 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Assignment5" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/GenericsHomework.Tests/NodeTest.cs</url>
-          <line>18</line>
-          <properties documentPath="C:\Users\Jason\Documents\CSCD371-Winter2023\EWU-CSCD371-2023-Winter\GenericsHomework\GenericsHomework.Tests\NodeTest.cs" initialLine="18" containingFunctionPresentation="method 'NodeExists_True'">
-            <startOffsets>
-              <option value="300" />
-            </startOffsets>
-            <endOffsets>
-              <option value="326" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
