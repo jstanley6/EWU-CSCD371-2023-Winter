@@ -6,17 +6,39 @@ public class NodeTest
    
     
     [TestMethod]
-    public void NodeExists_False()
+    public void CreateNodeHasSameValue_True()
     {
-        Node<int>? node = new (5);
-        Assert.IsFalse(node.Exists(10));
+        int testNodeVal = 52;
+        Node<int>? node = new (testNodeVal);
+       
+        Assert.AreEqual(testNodeVal, node.Value);
         
     }
 
     [TestMethod]
-    public void CreateNodeNext_True()
-    { 
-        Node<int>? node = new (10);
-        Assert.AreEqual(node, node.NextNode);
+    public void CreateNodeHasSameValue_False()
+    {
+        int testNodeVal = 45;
+        Node<int> node = new (10);
+        
+        Assert.IsFalse(testNodeVal == node.Value);
     }
+
+    [TestMethod]
+    public void CreateNodeIntValueToString()
+    {
+        int testNodeVal = 6;
+        Node<int> node = new (testNodeVal);
+        
+        Assert.AreEqual(testNodeVal.ToString(), node.ToString());
+    }
+
+    [TestMethod]
+    public void CreateNodeString()
+    {
+        string testNodeVal = "Hello";
+        Node<string> node = new(testNodeVal);
+        Assert.AreEqual(testNodeVal, node.ToString());
+    }
+    
 }

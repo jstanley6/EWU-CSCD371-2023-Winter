@@ -1,48 +1,38 @@
 ﻿namespace GenericsHomework;
 
 public class Node<T>
-    {
-        public T? Value { get; set; }
-        public Node<T> NextNode { get; set; }
-        public Node<T>? PrevNode { get; set; }
-
-        public Node(T value)
+{
+    private T _value;
+        public T Value
         {
-            Value = value;
+            get { return _value; }
+        }
+        private Node<T> NextNode { get; set; }
+
+        public Node(T data)
+        {
+            _value = data;
             NextNode = this;
         }
 
         public override string? ToString()
         {
-            return Value?.ToString();
+            if (_value == null) return null;
+            return _value.ToString();
         }
 
-        public void Append(T value)
+        public Node<T> Append(T value)
         {
             if (Exists(value))
             {
-                throw new Exception("The value in content has already been Appended");
+                throw new Exception("The value in content already Exists");
             }
 
             Node<T> newNode = new Node<T>(value);
-            Node<T> current = this;
+            newNode.NextNode = NextNode;
+            NextNode = newNode;
 
-            if (NextNode == this)
-            {
-                NextNode = newNode;
-                newNode.PrevNode = this;
-            }
-            else
-            {
-                while (current.NextNode != this)
-                {
-                    current = current.NextNode;
-                }
-
-                current.NextNode = newNode;
-                newNode.PrevNode = current;
-
-            }
+            return newNode;
 
         }
 
@@ -66,7 +56,6 @@ public class Node<T>
         public void Clear()
         {
             NextNode = this;
-            PrevNode = null;
         }
 
     }
