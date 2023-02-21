@@ -3,16 +3,18 @@
 public class Node<T>
 {
     private T _value;
-        public T Value
-        {
-            get { return _value; }
-        }
-        private Node<T> NextNode { get; set; }
+    private Node<T> _nextNode;
+        private T Value => _value;
 
+        public Node<T> NextNode
+        {
+            get => _nextNode; 
+            private set => _nextNode = value;
+        }
         public Node(T data)
         {
             _value = data;
-            NextNode = this;
+            _nextNode = this;
         }
 
         public override string? ToString()
@@ -25,11 +27,13 @@ public class Node<T>
         {
             if (Exists(value))
             {
-                throw new Exception("The value in content already Exists");
+                throw new ArgumentException("The value already Exists");
             }
 
-            Node<T> newNode = new Node<T>(value);
-            newNode.NextNode = NextNode;
+            Node<T> newNode = new(value)
+            {
+                NextNode = NextNode
+            };
             NextNode = newNode;
 
             return newNode;
@@ -45,6 +49,9 @@ public class Node<T>
                 if (current.Value is null && value is null)
                 {
                     return true;
+                }else if (current.Value != null && current.Value.Equals(value))
+                {
+                    return true;
                 }
 
                 current = current.NextNode;
@@ -53,8 +60,17 @@ public class Node<T>
             return false;
         }
 
+        // There is no need to collect garbage,
+        // .NET automatically collects garbage on memory space that is no longer used
         public void Clear()
         {
+            var newNode = NextNode;
+            while (newNode.NextNode != this)
+            {
+                newNode = newNode.NextNode;
+            }
+
+            newNode.NextNode = NextNode;
             NextNode = this;
         }
 

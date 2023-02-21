@@ -2,28 +2,48 @@ namespace GenericsHomework.Tests;
 
 [TestClass]
 public class NodeTest
-{ 
-   
+{
+
+    [TestMethod]
+    public void ClearCurrentNode()
+    {
+        int val1 = 5;
+        int val2 = 4;
+
+        Node<int> node1 = new(val1);
+        Node<int> node2 = node1.Append(val2);
+        
+        node1.Clear();
+        Assert.IsFalse(node1.NextNode == node2);
+    }
     
     [TestMethod]
-    public void CreateNodeHasSameValue_True()
+    public void DuplicateNodes_False()
     {
-        int testNodeVal = 52;
-        Node<int>? node = new (testNodeVal);
-       
-        Assert.AreEqual(testNodeVal, node.Value);
+        int val1 = 1;
+        int val2 = 2;
+        int val3 = 3;
+
+        Node<int> node1 = new(val1);
+        Node<int> node12 = node1.Append(val2);
+
+        bool exists = node1.Exists(val3);
         
+        Assert.IsFalse(exists);
     }
 
     [TestMethod]
-    public void CreateNodeHasSameValue_False()
+    [ExpectedException(typeof(ArgumentException), "The value already Exists")]
+    public void Append_ThrowsException()
     {
-        int testNodeVal = 45;
-        Node<int> node = new (10);
+        int val1 = 1;
+        int val2 = 2;
+        Node<int> node1 = new(val1);
+        Node<int> node2 = node1.Append(val2);
+        Node<int> node3 = node2.Append(val2);
         
-        Assert.IsFalse(testNodeVal == node.Value);
     }
-
+    
     [TestMethod]
     public void CreateNodeIntValueToString()
     {
@@ -40,5 +60,8 @@ public class NodeTest
         Node<string> node = new(testNodeVal);
         Assert.AreEqual(testNodeVal, node.ToString());
     }
+
+    
+    
     
 }
