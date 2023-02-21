@@ -351,3 +351,5 @@ MigrationBackup/
 
 # Live unit testing files.
 *.lutconfig
+
+Assignment6/Calculate/.idea/.idea.Calculate/.idea/
