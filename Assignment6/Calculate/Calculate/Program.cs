@@ -11,9 +11,9 @@ public class Program
         Writeline = Console.WriteLine;
         Readline = Console.ReadLine;
     }
-    
+
     public Action<string> Writeline { get; init; }
-    public Func<string?> Readline { get; init; }
+    public Func<string?> Readline { get; init; } 
 
     public static void Main(string[] args)
     {
