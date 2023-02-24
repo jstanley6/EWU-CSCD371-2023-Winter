@@ -57,7 +57,67 @@ public class CalculatorTests
         
         Assert.AreEqual(resTest, divTest);
     }
+[TestMethod]
+    public void TryCalculateTest_True()
+    {
+        string equation = "2 + 3";
+        int expected = 5;
+        
+        Assert.IsTrue(_calc.TryCalculate(equation, out double result));
+        
+        Assert.AreEqual<double>(expected, result);
+    }
+
+    [TestMethod]
+    public void TryCalculateTestNoSpace_Failed()
+    {
+        string testCalcEquation = "3+5";
+        double expected = 0;
+        bool tryCalcBoolean = _calc.TryCalculate(testCalcEquation, out double result);
+        Assert.IsFalse(tryCalcBoolean);
+        Assert.AreEqual<double>(expected, result);
+    }
+
+    [TestMethod]
+    public void TryCalculateAdd_Test()
+    {
+        string testCalcEquation = "6 + 2";
+        double expected = 8;
+        bool tryCalcBool = _calc.TryCalculate(testCalcEquation, out double result);
+        Assert.IsTrue(tryCalcBool);
+        Assert.AreEqual<double>(expected,result);
+    }
     
+    [TestMethod]
+    public void TryCalculateSubtract_Test()
+    {
+        string testCalcEquation = "6 - 2";
+        double expected = 4;
+        bool tryCalcBool = _calc.TryCalculate(testCalcEquation, out double result);
+        Assert.IsTrue(tryCalcBool);
+        Assert.AreEqual<double>(expected,result);
+    }
     
+    [TestMethod]
+    public void TryCalculateMultiply_Test()
+    {
+        string testCalcEquation = "6 * 2";
+        double expected = 12;
+        bool tryCalcBool = _calc.TryCalculate(testCalcEquation, out double result);
+        Assert.IsTrue(tryCalcBool);
+        Assert.AreEqual<double>(expected,result);
+    }
     
+    [TestMethod]
+    public void TryCalculateDivide_Test()
+    {
+        string testCalcEquation = "10 / 2";
+        double expected = 5;
+        bool tryCalcBool = _calc.TryCalculate(testCalcEquation, out double result);
+        Assert.IsTrue(tryCalcBool);
+        Assert.AreEqual<double>(expected,result);
+    }
+
+
+
 }

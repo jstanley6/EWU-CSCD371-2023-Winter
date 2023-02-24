@@ -6,14 +6,10 @@ using System;
 
 public class Program
 {
-    public Program()
-    {
-        Writeline = Console.WriteLine;
-        Readline = Console.ReadLine;
-    }
+    public Program() {}
 
-    public Action<string> Writeline { get; init; }
-    public Func<string?> Readline { get; init; } 
+    public Action<string> Writeline { get; init; } = text => Console.WriteLine(text);
+    public Func<string?> Readline { get; init; } = () => Console.ReadLine();
 
     public static void Main(string[] args)
     {
@@ -43,7 +39,7 @@ public class Program
             }
             else
             {
-                Console.WriteLine("Invalid Input. Please try again.");
+                program.Writeline("Invalid Input. Please try again.");
             }
         } while (!exit);
     }
