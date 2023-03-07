@@ -13,6 +13,12 @@ namespace Assignment;
             _next = this;
         }
 
+        public Node()
+        {
+            _value = Value;
+            _next = this;
+        }
+
         public T Value { get { return _value; } }
 
         public IEnumerator<T> GetEnumerator()
